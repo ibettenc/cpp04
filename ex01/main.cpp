@@ -6,7 +6,7 @@
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:30:55 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/26 17:37:58 by ibettenc         ###   ########.fr       */
+/*   Updated: 2026/05/26 18:56:00 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,11 @@ int main()
     j->makeSound(); // "Waf waf !"
     meta->makeSound(); // "Generic animal sound"
 
+    // METTRE DES TESTS POUR BRAIN
+    // ...
+    
     // Nettoyage mémoire
     delete meta;
     delete j;
     delete i;
-
-    cout << "\n--- Test WrongAnimal / WrongCat ---" << endl;
-    
-    const WrongAnimal* wrong_cat = new WrongCat();
-    cout << wrong_cat->getType() << endl; // "WrongCat"
-    wrong_cat->makeSound(); // "WrongAnimal sound" (hérité)
-
-    delete wrong_cat;
 }

@@ -1,43 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 16:04:30 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/26 17:30:40 by ibettenc         ###   ########.fr       */
+/*   Created: 2026/04/14 15:49:33 by ibettenc          #+#    #+#             */
+/*   Updated: 2026/04/14 16:53:23 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Animal.hpp"
 
-Cat::Cat()
+Animal::Animal()
 {
-    cout << "Cat constructor called" << endl;
-    this->type = "Cat";
+    cout << "Animal constructor called" << endl;
+    this->type = "Animal";
 }
 
-Cat::Cat(const Cat &other)
+Animal::Animal(const Animal &other)
 {
-    cout << "Cat copy constructor called" << endl;
+    cout << "Animal copy constructor called" << endl;
     this->type = other.type;
 }
 
-Cat& Cat::operator=(const Cat& other)
+Animal& Animal::operator=(const Animal& other)
 {
-    cout << "Cat copy assignment constructor called" << endl;
+    cout << "Animal copy assignment constructor called" << endl;
     if (this != &other)
         this->type = other.type;
     return *this;
 }
 
-Cat::~Cat()
+Animal::~Animal()
 {
-    cout << "Cat destructor called" << endl;
+    cout << "Animal destructor called" << endl;
 }
 
-void Cat::makeSound() const 
+string Animal::getType() const
 {
-    cout << "Moew meow !" << endl; 
+    return this->type;
+}
+
+void Animal::makeSound() const
+{
+    cout << "Generic animal sound" << endl;
 }

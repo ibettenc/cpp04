@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 16:04:30 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/26 17:30:40 by ibettenc         ###   ########.fr       */
+/*   Created: 2026/04/14 16:27:58 by ibettenc          #+#    #+#             */
+/*   Updated: 2026/04/14 16:54:32 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat()
+WrongCat::WrongCat()
 {
-    cout << "Cat constructor called" << endl;
-    this->type = "Cat";
+    cout << "WrongCat constructor called" << endl;
+    this->type = "WrongCat";
 }
 
-Cat::Cat(const Cat &other)
+WrongCat::WrongCat(const WrongCat& other)
 {
-    cout << "Cat copy constructor called" << endl;
+    cout << "WrongCat copy constructor called" << endl;
     this->type = other.type;
 }
 
-Cat& Cat::operator=(const Cat& other)
+WrongCat& WrongCat::operator=(const WrongCat& other)
 {
-    cout << "Cat copy assignment constructor called" << endl;
+    cout << "WrongCat copy assignment constructor called" << endl;
     if (this != &other)
         this->type = other.type;
     return *this;
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-    cout << "Cat destructor called" << endl;
+    cout << "WrongCat destructor called" << endl;
 }
 
-void Cat::makeSound() const 
-{
-    cout << "Moew meow !" << endl; 
-}
+// Pas de makeSound() -> héritage de WrongAnimal

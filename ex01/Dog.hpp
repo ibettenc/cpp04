@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 15:58:47 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/26 17:22:47 by ibettenc         ###   ########.fr       */
+/*   Created: 2026/04/14 15:56:45 by ibettenc          #+#    #+#             */
+/*   Updated: 2026/05/26 18:53:30 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
+#include <sstream>
 
-class Cat : public Animal
+class Dog : public Animal
 {
+    private:
+        Brain* brain;
+    
     public:
-        Cat();
-        Cat(const Cat& other);
-        Cat& operator=(const Cat& other);
-        ~Cat();
+        Dog();
+        Dog(const Dog& other);
+        Dog& operator=(const Dog& other);
+        ~Dog();
 
-        void makeSound() const ;
+        void makeSound() const;
+                
+        void setIdea(int index, string idea);
+        string getIdea(int index) const;
 };
 
 #endif
