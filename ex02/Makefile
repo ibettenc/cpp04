@@ -6,14 +6,14 @@
 #    By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/29 17:20:34 by ivan              #+#    #+#              #
-#    Updated: 2026/05/28 14:54:07 by ibettenc         ###   ########.fr        #
+#    Updated: 2026/05/28 14:57:37 by ibettenc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ###################################################
 ## ARGUMENTS
 
-NAME = polymorphism_but_better
+NAME = polymorphism_but_even_better
 
 CC = c++
 
