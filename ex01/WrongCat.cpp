@@ -6,7 +6,7 @@
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:27:58 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/04/14 16:54:32 by ibettenc         ###   ########.fr       */
+/*   Updated: 2026/06/25 16:43:37 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 WrongCat::WrongCat()
 {
-    cout << "WrongCat constructor called" << endl;
+    std::cout << "WrongCat constructor called" << std::endl;
     this->type = "WrongCat";
 }
 
-WrongCat::WrongCat(const WrongCat& other)
+WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other)
 {
-    cout << "WrongCat copy constructor called" << endl;
-    this->type = other.type;
+    std::cout << "WrongCat copy constructor called" << std::endl;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& other)
 {
-    cout << "WrongCat copy assignment constructor called" << endl;
+    std::cout << "WrongCat copy assignment constructor called" << std::endl;
     if (this != &other)
         this->type = other.type;
     return *this;
@@ -34,7 +33,7 @@ WrongCat& WrongCat::operator=(const WrongCat& other)
 
 WrongCat::~WrongCat()
 {
-    cout << "WrongCat destructor called" << endl;
+    std::cout << "WrongCat destructor called" << std::endl;
 }
 
 // Pas de makeSound() -> héritage de WrongAnimal
