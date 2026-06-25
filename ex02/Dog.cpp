@@ -6,28 +6,27 @@
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:59:18 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/28 15:23:49 by ibettenc         ###   ########.fr       */
+/*   Updated: 2026/06/25 16:56:15 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : brain(new Brain())
 {
-    cout << "Dog constructor called" << endl;
+    std::cout << "Dog constructor called" << std::endl;
     this->type = "Dog";
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal(other)
 {
-    cout << "Dog copy constructor called" << endl;
-    this->type = other.type;
+    std::cout << "Dog copy constructor called" << std::endl;
     this->brain = new Brain(*other.brain); // deep copy
 }
 
 Dog& Dog::operator=(const Dog& other)
 {
-    cout << "Dog copy assignment constructor called" << endl;
+    std::cout << "Dog copy assignment constructor called" << std::endl;
     if (this != &other)
     {
         this->type = other.type;
@@ -39,22 +38,22 @@ Dog& Dog::operator=(const Dog& other)
 
 Dog::~Dog()
 {
-    cout << "Dog destructor called" << endl;
+    std::cout << "Dog destructor called" << std::endl;
     delete brain;
 }
 
 void Dog::makeSound() const 
 {
-    cout << "Waf waf !" << endl; 
+    std::cout << "Waf waf !" << std::endl; 
 }
 
-void Dog::setIdea(int index, string idea)
+void Dog::setIdea(int index, std::string idea)
 {
     if (brain)
         brain->setIdea(index, idea);
 }
 
-string Dog::getIdea(int index) const
+std::string Dog::getIdea(int index) const
 {
     if (brain)
         return brain->getIdea(index);

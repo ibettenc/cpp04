@@ -6,7 +6,7 @@
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:06:32 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/04/14 16:12:44 by ibettenc         ###   ########.fr       */
+/*   Updated: 2026/06/25 16:54:00 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
 
 class WrongAnimal
 {
     protected:
-        string type;
+        std::string type;
         
     public:
         WrongAnimal();
@@ -28,7 +27,7 @@ class WrongAnimal
         WrongAnimal& operator=(const WrongAnimal& other);
         virtual ~WrongAnimal();
 
-        string getType() const;
+        std::string getType() const;
         virtual void makeSound() const;
 };
 

@@ -6,7 +6,7 @@
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:30:55 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/28 15:24:55 by ibettenc         ###   ########.fr       */
+/*   Updated: 2026/06/25 15:28:41 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 int main()
 {
-    cout << "--- Test Animal ---" << endl;
+    std::cout << "--- Test Animal ---" << std::endl;
 
     // 1. Allocation dynamique avec pointeur de base (Animal*)
     Animal* meta = new Animal();
@@ -29,8 +29,8 @@ int main()
     Animal* i = new Cat();
 
     // Affichage des types
-    cout << j->getType() << endl; // "Dog"
-    cout << i->getType() << endl; // "Cat"
+    std::cout << j->getType() << std::endl; // "Dog"
+    std::cout << i->getType() << std::endl; // "Cat"
 
     // Appel des sons
     i->makeSound(); // "Meow meow !"

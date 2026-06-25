@@ -6,7 +6,7 @@
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:31:46 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/26 17:27:31 by ibettenc         ###   ########.fr       */
+/*   Updated: 2026/06/25 15:32:32 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 
 #include <string>
 #include <iostream>
-using namespace std;
 
 class Animal
 {
     protected: //protected pour heritage sinon private
-        string type;
+        std::string type;
     public:
         Animal();
         Animal(const Animal& other);

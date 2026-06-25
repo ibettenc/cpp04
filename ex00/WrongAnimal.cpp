@@ -6,7 +6,7 @@
 /*   By: ibettenc <ibettenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:20:02 by ibettenc          #+#    #+#             */
-/*   Updated: 2026/05/26 17:37:28 by ibettenc         ###   ########.fr       */
+/*   Updated: 2026/06/25 15:49:31 by ibettenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 WrongAnimal::WrongAnimal()
 {
-    cout << "WrongAnimal constructor called" << endl;
+    std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &other)
 {
-    cout << "WrongAnimal copy constructor called" << endl;
+    std::cout << "WrongAnimal copy constructor called" << std::endl;
     this->type = other.type;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
 {
-    cout << "WrongAnimal copy assignment constructor called" << endl;
+    std::cout << "WrongAnimal copy assignment constructor called" << std::endl;
     if (this != &other)
         this->type = other.type;
     return *this;
@@ -33,15 +33,15 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
 
 WrongAnimal::~WrongAnimal()
 {
-    cout << "WrongAnimal destructor called" << endl;
+    std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-string WrongAnimal::getType() const
+std::string WrongAnimal::getType() const
 {
     return this->type;
 }
 
 void WrongAnimal::makeSound() const
 {
-    cout << "Generic Wrong Animal sound" << endl;
+    std::cout << "Generic Wrong Animal sound" << std::endl;
 }
